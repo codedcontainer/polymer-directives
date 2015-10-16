@@ -1,0 +1,85 @@
+<link rel="import"
+      href="bower_components/polymer/polymer.html">
+
+<link rel="import"
+      href="bower_components/polymer/polymer.html">
+<dom-module id="intro-slider">
+
+  <template>
+    <!-- scoped CSS for this element -->
+    <style>
+      #footerspan{background-color:#337ab7}
+#footerspan .container{color:#E9E9E9}
+#footerspan .container a{color:#FFF}
+#footerspan a:hover{text-decoration:underline}
+#home-address{margin-right:10px}
+#footer{padding-bottom:30px}
+.footer__img {
+    width: 50%;
+    filter: greyscale(100%);
+    -webkit-filter: greyscale(1);
+    -webkit-filter: grayscale(100%);
+}
+
+    </style>
+
+    <script>
+    $('#slideshow').slick({slidesToShow: 4, autoplay: true, autoplaySpeed: 3000});
+
+    $('#slideshow').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+      //get the current slide src
+      var thisSlide = $('.slick-slide').eq(currentSlide).find('img').attr('src');
+      console.log(thisSlide);
+      //get the background slide and change background image w/ current slide 
+      $('.banner-img').animate({ opacity: 0 }, 'slow', function()
+      {
+             $(this).css({"background-image":"url('"+thisSlide+"')"}).animate({opacity: 1}, 'slow');
+      });
+     
+    });
+
+    $('.fancybox').fancybox();
+
+    </script> 
+    <div>
+	
+<div class="container-fluid">
+<div class="banner-img">
+  <div class="banner-pattern">
+  <div class="container" id="intro">
+    <h2 class="text-center" style="font-size:44px; ">WELCOME TO JAGUAR CAMPS!</h2>
+    <p class='intro__text'> Our mission is to create a safe and encouraging environment where children develop healthy habits while engaging in individualized activities designed to support success at any age, skill, or level of ability.</p>
+  
+  <div id="slideshow">
+    <div><a href="/img/girlSoftball.jpg"   rel="group" class="fancybox"> <img src="/img/girlSoftball.jpg" height="150" alt=""></a></div>
+    <div><a href="/img/girlSoftball2.jpg"  rel="group"  class="fancybox"> <img src="/img/girlSoftball2.jpg" height="150" alt=""></a></div>
+    <div><a href="/img/girlSoftball3.jpg"  rel="group" class="fancybox"> <img src="/img/girlSoftball3.jpg" height="150" alt=""></a></div>
+    <div><a href="/img/childBridge.jpg"  class="fancybox"> <img src="/img/childBridge.jpg" height ="150" alt=""></a></div>
+    <div><a href="/img/childGroup.jpg"   rel="group" class="fancybox"> <img src="/img/childGroup.jpg" height="150" alt=""></a></div>
+      <div><a href="/img/girlSoftball.jpg"  rel="group"  class="fancybox"> <img src="/img/girlSoftball.jpg" height="150" alt=""></a></div>
+    <div><a href="/img/girlSoftball2.jpg"   rel="group" class="fancybox"> <img src="/img/girlSoftball2.jpg" height="150" alt=""></a></div>
+    <div><a href="/img/girlSoftball3.jpg"  rel="group"  class="fancybox"> <img src="/img/girlSoftball3.jpg" height="150" alt=""></a></div>
+    <div><a href="/img/childBridge.jpg"   rel="group" class="fancybox"> <img src="/img/childBridge.jpg" height ="150" alt=""></a></div>
+    <div><a href="/img/childGroup.jpg"   rel="group" class="fancybox"> <img src="/img/childGroup.jpg" height="150" alt=""></a></div>
+  </div>
+  </div>
+</div>
+   </div>
+
+</div>
+
+
+		
+      <!-- any children are rendered here -->
+      <content></content>
+    </div>
+  </template>
+
+  <script>
+    Polymer({
+      is: "intro-slider"
+	  });
+  </script>
+
+</dom-module>
+

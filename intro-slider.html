@@ -1,0 +1,90 @@
+<link rel="import"
+      href="bower_components/polymer/polymer.html">
+
+<link rel="import"
+      href="bower_components/polymer/polymer.html">
+
+
+<dom-module id="intro-slider">
+
+  <template>
+    <!-- scoped CSS for this element -->
+    <style>
+      @media (min-width: 768px) {.navbar-nav {float:none;}}
+         .banner-img { background-image: url('http://placehold.it/400x400'); background-size: cover; height: 400px; background-color: green;
+          position: relative; z-index: 1; 
+          height: 400px;
+          -webkit-transition:all 1s ease-in;
+            -moz-transition:all 1s ease-in;
+            -o-transition:all 1s ease-in;
+            -ms-transition:all 1s ease-in;
+            transition:all 1s ease-in;
+        } 
+        .banner-pattern:before{ background-image: url('http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/dark_embroidery.png');  opacity: .6; height: 400px;
+        position: absolute;
+        z-index: -1;
+        content: "";
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        }
+
+        #slideshow { margin-top: 50px;}
+
+        /* home */
+        .intro__text { font-size: 20px; 
+        margin: auto; 
+        text-align: center; 
+        width: 77%; 
+        }
+        #intro .slick-next { right: -9px;}
+        #intro { color: white;}
+
+      @media (min-width: 1200px) {
+.container{width:1020px}
+}
+
+    </style>
+
+    <div>
+	
+<div class="banner-img">
+  <div class="banner-pattern">
+  <div class="container" id="intro">
+    <h2 class="text-center" style="font-size:44px; ">WELCOME TO SOMETHING HERE</h2>
+    <p class='intro__text'> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur saepe placeat quam sequi cum perspiciatis, quasi! Quidem quas sed, porro aliquid molestiae, magni facere tempora fugiat dolorum, minima non voluptatum.</p>
+  
+  <div id="slideshow">
+    <div><a href="/"   rel="group" class="fancybox"> <img src="http://placehold.it/150x150" height="150" alt=""></a></div>
+    <div><a href="/"  rel="group"  class="fancybox"> <img src="http://placehold.it/150x150" height="150" alt=""></a></div>
+    <div><a href="/"  rel="group" class="fancybox"> <img src="http://placehold.it/150x150" height="150" alt=""></a></div>
+    <div><a href="/"  class="fancybox"> <img src="http://placehold.it/150x150" height ="150" alt=""></a></div>
+    <div><a href="/"   rel="group" class="fancybox"> <img src="http://placehold.it/150x150" height="150" alt=""></a></div>
+      <div><a href="/"  rel="group"  class="fancybox"> <img src="http://placehold.it/150x150" height="150" alt=""></a></div>
+    <div><a href="/"   rel="group" class="fancybox"> <img src="http://placehold.it/150x150" height="150" alt=""></a></div>
+    <div><a href="/"  rel="group"  class="fancybox"> <img src="http://placehold.it/150x150" height="150" alt=""></a></div>
+    <div><a href="/"   rel="group" class="fancybox"> <img src="http://placehold.it/150x150" height ="150" alt=""></a></div>
+    <div><a href="/"   rel="group" class="fancybox"> <img src="http://placehold.it/150x150" height="150" alt=""></a></div>
+  </div>
+  </div>
+</div>
+   </div>
+
+
+
+		
+      <!-- any children are rendered here -->
+      <content></content>
+    </div>
+  </template>
+
+  <script>
+    Polymer({
+      is: "intro-slider"
+	  });
+
+  </script>
+
+</dom-module>
+

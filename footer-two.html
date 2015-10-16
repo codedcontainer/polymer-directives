@@ -1,0 +1,65 @@
+<link rel="import"
+      href="bower_components/polymer/polymer.html">
+
+<link rel="import"
+      href="bower_components/polymer/polymer.html">
+<dom-module id="footer-two">
+
+  <template>
+    <!-- scoped CSS for this element -->
+    <style>
+      #footerspan{background-color:#337ab7}
+#footerspan .container{color:#E9E9E9}
+#footerspan .container a{color:#FFF}
+#footerspan a:hover{text-decoration:underline}
+#home-address{margin-right:10px}
+#footer{padding-bottom:30px}
+.footer__img {
+    width: 50%;
+    filter: greyscale(100%);
+    -webkit-filter: greyscale(1);
+    -webkit-filter: grayscale(100%);
+    padding-top: 20px;
+}
+.footer-two {padding-top: 10px;}
+    </style>
+    <div>
+	<div id="footerspan">
+  <div id="footer" class="container">
+    <div class="row">       
+    <div class="col-sm-4 ">
+      <a href="/"><img src="http://placehold.it/250x250" class="center-block footer__img" alt=""></a>
+    </div>
+    <div class="col-sm-4">
+      <a href="/"><img src="http://placehold.it/250x250" class=" center-block footer__img" alt=""></a>
+    </div>
+
+    <div class="col-sm-4">
+      <a href="/"><img src="http://placehold.it/250x250" class=" center-block footer__img" alt=""></a>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-sm-12 text-center">
+      <p>Main Name - Sub Name <br>
+      Place Name - 1234 Gingerbread Ln, City, ST 123456 <br>
+      Call us at 123-456-7890 or email at email@email.com</p>
+     Additional Link | Additional Link | Additional Link | Additional Link
+      <p></p> 
+</div>
+    </div>
+    </div>  
+  </div>
+		
+      <!-- any children are rendered here -->
+      <content></content>
+    </div>
+  </template>
+
+  <script>
+    Polymer({
+      is: "footer-two"
+	  });
+  </script>
+
+</dom-module>
+

@@ -1,0 +1,97 @@
+<link rel="import"
+      href="bower_components/polymer/polymer.html">
+
+<link rel="import"
+      href="bower_components/polymer/polymer.html">
+<dom-module id="footer-one">
+
+  <template>
+    <!-- scoped CSS for this element -->
+    <style>
+       #footer{ padding-bottom:30px }
+  .footerspan{ background-color:#4b3b32; padding-bottom: 50px; }
+    .footerspan .container{ color:#E9E9E9 }
+      .footerspan .container a{ color:#FFF }
+      .footerspan a:hover{ text-decoration:underline }
+  #home-address{ margin-right:10px }
+  
+  .footerspan h3, .footerspan h4{ font-weight: bold; margin: 0px; }
+  .footerspan h3 { font-size: 15px; margin: 20px 0px 2px 0px;}
+  .footerspan h4, .footerspan h5{ font-size: 12px; margin-bottom: 10px; }
+  .footerspan address, ul#usefulLinks li a, #hours{ color: rgba(255, 255, 255, 0.65); }
+  .footerspan h5 { margin-top: 20px; font-size: 13px;}
+  
+    #usefulLinks { list-style-type: none; padding: 0px; }
+  #usefulLinks li { padding-top: 7px ;}
+    </style>
+    <div>
+	<div class="footerspan">
+  <div class="container">
+    <div class="row">       
+     <div class="col-sm-4">       
+     <h3>TITLE OF PLACE</h3>
+     <h4>TITLE OF SECOND PLACE</h4>
+     <address>
+          123 Street <br>
+          Cityname, ST 12345 <br>
+          Phone: 123-456-7890<br>
+          Fax: 123-456-7890
+      </address>
+      <h4>OFFICE HOURS</h4>
+      <section id="hours">
+        Monday - Friday<br>
+        8:00 a.m - 5:00 p.m.
+      </section>
+      <a href="emailto:email@email.com">email@email.com</a>
+
+        </div>      
+        <div class="col-sm-4">
+          <h5>USEFUL LINKS </h5>
+          <ul id="usefulLinks">
+            <li> <a href="/">PLACE FOR LINK</a></li>
+            <li> <a href="/">PLACE FOR LINK</a></li>
+            <li> <a href="/">PLACE FOR LINK</a></li>
+            <li> <a href="/">PLACE FOR LINK</a></li>
+            <li> <a href="/">PLACE FOR LINK</a></li>
+            <li> <a href="/">PLACE FOR LINK</a></li>
+            <li> <a href="/">PLACE FOR LINK</a></li>
+            <li> <a href="/">PLACE FOR LINK</a></li>
+            <li> <a href="/">PLACE FOR LINK</a></li>
+            <li> <a href="/">PLACE FOR LINK</a></li>
+          </ul>
+            
+        </div>
+
+        <div class="col-sm-4">
+          <h5>FREQUENTLY USED TOOLS</h5>
+            <ul id="usefulLinks">
+            <li> <a href="/">PLACE FOR LINK</a></li>
+            <li> <a href="/">PLACE FOR LINK</a></li>
+            <li> <a href="/">PLACE FOR LINK</a></li>
+            <li> <a href="/">PLACE FOR LINK</a></li>
+            <li> <a href="/">PLACE FOR LINK</a></li>
+            <li> <a href="/">PLACE FOR LINK</a></li>
+            <li> <a href="/">PLACE FOR LINK</a></li>
+
+
+            </ul>
+          
+        </div>
+          
+    </div>  
+  </div>
+</div>
+		
+      <!-- any children are rendered here -->
+      <content></content>
+    </div>
+  </template>
+
+  <script>
+    Polymer({
+      is: "footer-one"
+	  });
+  </script>
+
+</dom-module>
+
